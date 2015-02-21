@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  domain: MyString
+  responsetime: 9.99
+  server: MyString
+  framework: MyString
+
+two:
+  domain: MyString
+  responsetime: 9.99
+  server: MyString
+  framework: MyString

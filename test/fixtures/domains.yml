@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  median: 9.99
+  min: 9.99
+  max: 9.99
+  avg: 9.99
+  server: MyString
+  framework: MyString
+
+two:
+  name: MyString
+  median: 9.99
+  min: 9.99
+  max: 9.99
+  avg: 9.99
+  server: MyString
+  framework: MyString
