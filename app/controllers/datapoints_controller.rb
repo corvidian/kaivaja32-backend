@@ -19,13 +19,17 @@ class DatapointsController < ApplicationController
   # POST /datapoints.json
   def create
     p = datapoint_params
-    @datapoint = Datapoint.new(p)
+    #pd = p[:domain, :responsetime, :server, :framework]
+    pd = {domain: p[:domain], responsetime: p[:responsetime], server: p[:server], framework: p[:framework]}
+    @datapoint = Datapoint.new(pd)
     puts params[:datapoint][:widgets]
     puts '******'
     puts p
 
     if @datapoint.save
-      params[:datapoint][:widgets].each { |a| @datapoint.widgets.create(name: a) }
+      if params[:datapoint][:widgets] != nil
+        params[:datapoint][:widgets].each { |a| @datapoint.widgets.create(name: a) }
+      end
       render json: @datapoint, status: :created, location: @datapoint
     else
       render json: @datapoint.errors, status: :unprocessable_entity
